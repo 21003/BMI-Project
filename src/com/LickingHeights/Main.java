@@ -9,7 +9,7 @@ public class Main {
         keyboard = new Scanner(System.in);
         String Name;
         int HeightFT, HeightIN;
-        double HeightM;
+        double HeightM, Weight ,BMI;
 
 
 
@@ -21,7 +21,13 @@ public class Main {
         System.out.println("How tall are you in inches ?");
         HeightIN=keyboard.nextInt();
         HeightIN = HeightFT+HeightIN;
-        HeightM = HeightIN * 0.025;
+        HeightM = HeightIN * .025;
+        HeightM = HeightM * HeightM;
+        System.out.println("How much do you weight in pounds?");
+        Weight=keyboard.nextInt();
+        Weight = Weight * .45;
+        BMI = Weight/HeightM;
+        System.out.println(""+Name+ " your BMI (Body Mass Index) is "+BMI+"");
 
 
 
